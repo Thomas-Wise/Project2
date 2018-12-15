@@ -37,7 +37,7 @@ node::node(const node& x)
 {
 	setID(x.getID());
 	setPID(x.getPID());
-	setRE(x.getRE);
+	setRE(x.getRE());
 	setLHash(x.getLHash());
 	setRHash(x.getRHash());
 	setLHist(x.getLHist());

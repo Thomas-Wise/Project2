@@ -18,7 +18,7 @@ hash::hash(fixedString x)
 	for (int i = 0; i < 8; i++)
 	{
 		temp = 1;
-		for (int j = 0; j < i; i++)
+		for (int j = 0; j < i; j++)
 		{
 			temp *= 256;
 		}

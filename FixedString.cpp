@@ -58,7 +58,7 @@ void fixedString::setString(fixedString x)
 
 void fixedString::setString(string x)
 {
-	for (int i = 0; i < 8; i++)
+	for (unsigned int i = 0; i < 8; i++)
 	{
 		if (i < x.length())
 		{
