@@ -2,7 +2,7 @@
 // Thomas Wise
 // COSC 2030
 // Project 02
-// 14 Dec 2018
+// 15 Dec 2018
 
 #ifndef NODE_H
 #define NODE_H
@@ -16,6 +16,8 @@ using std::vector;
 class node
 {
 public:
+	node(void);
+	node(string);
 	node(string, node&);
 	node(node&);
 	fixedString getID(void) const;
@@ -27,14 +29,20 @@ public:
 	vector<fixedString> getRHist(void) const;
 
 	void setID(fixedString);
+	void setID(string);
 	void setPID(fixedString);
+	void setPID(string);
 	void setRE(string);
 	void setLHash(fixedString);
+	void setLHash(string);
 	void setRHash(fixedString);
+	void setRHash(string);
 	void setLHist(vector<fixedString>);
 	void setRHist(vector<fixedString>);
 	void appendLHist(fixedString);
+	void appendLHist(string);
 	void appendRHist(fixedString);
+	void appendRHist(string);
 private:
 	fixedString ID;
 	fixedString PID;
