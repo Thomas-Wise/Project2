@@ -19,7 +19,7 @@ public:
 	node(void);
 	node(string);
 	node(string, node&);
-	node(node&);
+	node(const node&);
 	~node(void);
 	fixedString getID(void) const;
 	fixedString getPID(void) const;
@@ -33,6 +33,7 @@ public:
 	void setID(string);
 	void setPID(fixedString);
 	void setPID(string);
+	void setRE(fixedString);
 	void setRE(string);
 	void setLHash(fixedString);
 	void setLHash(string);

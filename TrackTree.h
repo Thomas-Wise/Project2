@@ -9,7 +9,7 @@
 
 #include "Node.h"
 #include "FixedString.h"
-using std::hash;
+#include "Hash.h"
 
 class trackTree
 {
@@ -18,6 +18,7 @@ public:
 	trackTree(string);
 	trackTree(fixedString);
 	trackTree(node);
+	~trackTree(void);
 	node getNode(int) const;
 	void addLayer(void);
 	void updateRE(int);
@@ -28,6 +29,7 @@ public:
 	void appendRHist(void);
 private:
 	vector<node> tree;
+	int layers;
 };
 
 #endif

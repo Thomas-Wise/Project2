@@ -33,7 +33,7 @@ node::node(string RE, node& x)
 	setRHash("");
 }
 
-node::node(node& x)
+node::node(const node& x)
 {
 	setID(x.getID());
 	setPID(x.getPID());
@@ -102,6 +102,14 @@ void node::setPID(fixedString x)
 void node::setPID(string x)
 {
 	PID.setString(x);
+}
+
+void node::setRE(fixedString x)
+{
+	for (int i = 0; i < 8; i++)
+	{
+		RE[i] = x.getChar(i);
+	}
 }
 
 void node::setRE(string x)
