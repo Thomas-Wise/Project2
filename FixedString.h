@@ -14,7 +14,7 @@ class fixedString
 {
 public:
 	fixedString(string);
-	fixedString(fixedString&);
+	fixedString(const fixedString&);
 	char getChar(int) const;
 	string getString(void) const;
 	void setChar(int, char);
