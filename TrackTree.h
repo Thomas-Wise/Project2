@@ -20,16 +20,13 @@ public:
 	trackTree(node);
 	~trackTree(void);
 	node getNode(int) const;
-	void addLayer(void);
-	void updateRE(int);
-	void updateID(void);
-	void updateLHash(void);
-	void updateRHash(void);
-	void appendLHist(void);
-	void appendRHist(void);
+	void addLayer(string);
+	void addEntry(string);
+	void updateParent(int);
 private:
 	vector<node> tree;
 	int layers;
+	int place;
 };
 
 #endif
