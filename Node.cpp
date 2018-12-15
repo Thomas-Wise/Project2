@@ -44,6 +44,11 @@ node::node(node& x)
 	setRHist(x.getRHist());
 }
 
+node::~node(void)
+{
+	LHist.clear();
+}
+
 fixedString node::getID(void) const
 {
 	return ID;

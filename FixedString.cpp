@@ -16,13 +16,16 @@ fixedString::fixedString(string x)
 	setString(x);
 }
 
-
 fixedString::fixedString(const fixedString& x)
 {
 	for (int i = 0; i < 8; i++)
 	{
 		str[i] = x.getChar(i);
 	}
+}
+
+fixedString::~fixedString(void)
+{
 }
 
 char fixedString::getChar(int i) const

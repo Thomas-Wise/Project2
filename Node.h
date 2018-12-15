@@ -20,6 +20,7 @@ public:
 	node(string);
 	node(string, node&);
 	node(node&);
+	~node(void);
 	fixedString getID(void) const;
 	fixedString getPID(void) const;
 	string getRE(void) const;

@@ -16,6 +16,7 @@ public:
 	fixedString(void);
 	fixedString(string);
 	fixedString(const fixedString&);
+	~fixedString(void);
 	char getChar(int) const;
 	string getString(void) const;
 	void setChar(int, char);
