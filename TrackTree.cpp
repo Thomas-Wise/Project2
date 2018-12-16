@@ -7,6 +7,7 @@
 #include "TrackTree.h"
 #include <time.h>
 
+// Constructors for the tracking tree
 trackTree::trackTree(void)
 {
 	srand(time(NULL));
@@ -90,6 +91,7 @@ trackTree::~trackTree(void)
 {
 }
 
+// These access the elements of the tree
 node trackTree::getNode(int i) const
 {
 	return tree[i];
@@ -105,6 +107,7 @@ int trackTree::getSize(void) const
 	return tree.size();
 }
 
+// Adds all the necessary nodes for a new layer
 void trackTree::addLayer(string RE)
 {
 	int newNodes, currentNode, parentNode;
@@ -132,6 +135,8 @@ void trackTree::addLayer(string RE)
 	layers++;
 }
 
+// Fills the next node in the bottom layer. If the bottom
+// layer is full, it calls the addLayer function.
 void trackTree::addEntry(string RE)
 {
 	if (place == (tree.size()))
@@ -150,12 +155,15 @@ void trackTree::addEntry(string RE)
 	place++;
 }
 
+// Allows for the RE to be updated after it already has something.
 void trackTree::updateRE(int i, string x)
 {
 	tree[i].setRE(x);
 	updateParent(i);
 }
 
+// Updates the parent of the current node and its parent and so on
+// all the way up the tree
 void trackTree::updateParent(int currentNode)
 {
 	if (currentNode != 0)

@@ -10,6 +10,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+// Displays the first three rows of the tree
 void showTree(trackTree tree)
 {
 	int layers = tree.getLayers();
@@ -50,6 +51,7 @@ void showTree(trackTree tree)
 	}
 }
 
+// Shows the information for one specific node in the tree
 void showNode(trackTree tree)
 {
 	int i = -1;
@@ -83,6 +85,7 @@ void showNode(trackTree tree)
 	cout << endl << endl;
 }
 
+// Changes the RE of one node in the tree
 void changeNode(trackTree& tree)
 {
 	int nodeIndex = -1;

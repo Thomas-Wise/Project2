@@ -6,6 +6,7 @@
 
 #include "Hash.h"
 
+// Constructors for the hash class
 hash::hash(void)
 {
 	val = 0;
@@ -31,11 +32,13 @@ hash::hash(unsigned long long int x)
 	val = x;
 }
 
+// Gets the numerical value of the hash
 unsigned long long int hash::getHash(void) const
 {
 	return val;
 }
 
+// Converts the numerical value of the hash back to a string
 fixedString hash::getString(void) const
 {
 	fixedString ans;
@@ -52,6 +55,7 @@ fixedString hash::getString(void) const
 	return ans;
 }
 
+// Changes the value of a hash
 void hash::setHash(unsigned long long int x)
 {
 	val = x;
@@ -62,6 +66,7 @@ void hash::setHash(hash x)
 	val = x.getHash();
 }
 
+// Allows the numerical value of two hashes to be added together
 hash hash::operator+(const hash& right) const
 {
 	unsigned long long int temp;

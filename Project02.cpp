@@ -25,12 +25,14 @@ int main()
 
 	while (input != "done")
 	{
+		// Standard prompt for each new entry
 		cout << "Please enter the next entry for the tree:" << endl;
 		cout << "(\"done\" to exit / \"show\" to view tree)" << endl;
 		cout << "(\"node\" to view a single node)" << endl;
 		cout << "(\"change\" to change RE of a node)" << endl;
 		cin >> input;
 
+		// These handle the special commands specified in the standard prompt.
 		if (input == "done")
 		{
 			break;

@@ -6,6 +6,7 @@
 
 #include "Node.h"
 
+// Creates a node with no info
 node::node(void)
 {
 	setID("");
@@ -15,6 +16,7 @@ node::node(void)
 	setRHash("");
 }
 
+// Creates a node from a string
 node::node(string RE)
 {
 	setID("");
@@ -24,6 +26,7 @@ node::node(string RE)
 	setRHash("");
 }
 
+// Creates a node from a string and the parent node
 node::node(string RE, node& x)
 {
 	setID("");
@@ -33,6 +36,7 @@ node::node(string RE, node& x)
 	setRHash("");
 }
 
+// Copy constructor
 node::node(const node& x)
 {
 	setID(x.getID());
@@ -44,11 +48,12 @@ node::node(const node& x)
 	setRHist(x.getRHist());
 }
 
+// Destructor
 node::~node(void)
 {
-	LHist.clear();
 }
 
+// The next several simply access all of the elements of a node
 fixedString node::getID(void) const
 {
 	return ID;
@@ -84,6 +89,7 @@ vector<fixedString> node::getRHist(void) const
 	return RHist;
 }
 
+// The next several change the values of elements in the node
 void node::setID(fixedString x)
 {
 	ID.setString(x);
@@ -147,6 +153,8 @@ void node::setRHist(vector<fixedString> x)
 	RHist = x;
 }
 
+
+// These append elements to the left and right histories of the node
 void node::appendLHist(fixedString x)
 {
 	LHist.push_back(x);
