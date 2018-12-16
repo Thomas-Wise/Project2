@@ -20,8 +20,11 @@ public:
 	trackTree(node);
 	~trackTree(void);
 	node getNode(int) const;
+	int getLayers(void) const;
+	int getSize(void) const;
 	void addLayer(string);
 	void addEntry(string);
+	void updateRE(int, string);
 	void updateParent(int);
 private:
 	vector<node> tree;

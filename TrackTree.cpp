@@ -95,6 +95,16 @@ node trackTree::getNode(int i) const
 	return tree[i];
 }
 
+int trackTree::getLayers(void) const
+{
+	return layers;
+}
+
+int trackTree::getSize(void) const
+{
+	return tree.size();
+}
+
 void trackTree::addLayer(string RE)
 {
 	int newNodes, currentNode, parentNode;
@@ -138,6 +148,12 @@ void trackTree::addEntry(string RE)
 		updateParent(place);
 	}
 	place++;
+}
+
+void trackTree::updateRE(int i, string x)
+{
+	tree[i].setRE(x);
+	updateParent(i);
 }
 
 void trackTree::updateParent(int currentNode)

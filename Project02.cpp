@@ -7,6 +7,7 @@
 // This will be the main file of the project.
 
 #include "TrackTree.h"
+#include "Visualization.h"
 #include <iostream>
 
 using std::cin;
@@ -16,6 +17,7 @@ using std::endl;
 
 int main()
 {
+	bool skip = false;
 	string input;
 	cout << "Please enter the first entry for the tree:" << endl;
 	cin >> input;
@@ -24,12 +26,39 @@ int main()
 	while (input != "done")
 	{
 		cout << "Please enter the next entry for the tree:" << endl;
+		cout << "(\"done\" to exit / \"show\" to view tree)" << endl;
+		cout << "(\"node\" to view a single node)" << endl;
+		cout << "(\"change\" to change RE of a node)" << endl;
 		cin >> input;
+
 		if (input == "done")
 		{
 			break;
 		}
-		tree.addEntry(input);
+		if (input == "show")
+		{
+			showTree(tree);
+			skip = true;
+		}
+		if (input == "node")
+		{
+			showNode(tree);
+			skip = true;
+		}
+		if (input == "change")
+		{
+			changeNode(tree);
+			skip = true;
+		}
+
+		if (skip == false)
+		{
+			tree.addEntry(input);
+		}
+		else
+		{
+			skip = false;
+		}
 	}
 	return 0;
 }

@@ -70,3 +70,12 @@ void fixedString::setString(string x)
 		}
 	}
 }
+
+ostream& operator<<(ostream& out, fixedString x)
+{
+	for (int i = 0; i < 8; i++)
+	{
+		out << x.getChar(i);
+	}
+	return out;
+}

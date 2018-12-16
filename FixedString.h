@@ -8,6 +8,8 @@
 #define FIXED_STRING_H
 
 #include <string>
+#include <iostream>
+using std::ostream;
 using std::string;
 
 class fixedString
@@ -26,4 +28,5 @@ private:
 	char str[8];
 };
 
+ostream& operator<<(ostream& out, fixedString x);
 #endif
